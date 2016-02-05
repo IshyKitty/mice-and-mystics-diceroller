@@ -1,0 +1,122 @@
+*:focus {
+    outline: none;
+}
+body {
+    font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+    margin: 5px;
+    padding: 0;
+}
+#mmDieRoller h1 {
+    font-family: "Droid Serif", "Times New Roman", serif;
+    margin: 0;
+    display: block;
+    font-size: 1.2em;
+}
+#mmDieRoller fieldset {
+    border: 1px solid #666;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    text-align: center;
+}
+#mmDieRoller legend {
+    padding: 10px 5px 5px;
+}
+#mmDieRoller .dice label {
+    display: inline-block;
+}
+#mmDieRoller label .fa {
+    margin: 0 0 5px;
+}
+#mmDieRoller .dice label > input {
+    visibility: hidden;
+    position: absolute;
+}
+#mmDieRoller .dice label > input + div {
+    cursor: pointer;
+    width: 25vw;
+    max-width: 100px;
+    margin: 0 0 2%;
+    padding: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+#mmDieRoller .dice label> input:checked + div {
+    border: 1px solid #666;
+}
+#mmDieRoller #rollNow {
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#mmDieRoller #rolling-container {
+    margin: 5px;
+    text-align: center;
+    display: block;
+    background-color: #666;
+    border-radius: 0px;
+    border: 10px inset #666;
+}
+#mmDieRoller #rolling-container.hidden {
+    display: none;
+}
+#mmDieRoller #mice-rolling-container,
+#mmDieRoller #minions-rolling-container {
+    margin: 0px;
+    padding: 0px;
+}
+#mmDieRoller #minions-rolling-container {
+    text-align: left;
+}
+#mmDieRoller .rolledDie {
+    height: 125px;
+    width: 125px;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#mmDieRoller #mice-rolling-container .rolledDie {
+    box-shadow: 5px 5px 0px 5px #ceb461;
+    background-image: url(MMdie-sprite.png);
+}
+#mmDieRoller #minions-rolling-container .rolledDie {
+    box-shadow: 5px 5px 0px 5px #333;
+    background-image: url(MMminiondie-sprite.png);
+}
+
+@media (min-width: 970px) {
+    #mmDieRoller {
+        width: 960px;
+	margin: 0 auto;
+	padding: 0;
+    }
+}
+@media (max-width: 960px) {
+    #mmDieRoller {
+        width: 100%;
+	padding: 0;
+	margin: 0 auto;
+    }
+    #mmDieRoller .rolledDie,
+    #mmDieRoller img {
+	width: 20vw;
+	height: 20vw;
+	max-width: 125px;
+	max-height: 125px;
+	min-height: 75px;
+	min-width: 75px;
+    }
+}
+#mmDieRoller img.rollingDie.gone {
+    opacity: 0;
+    transition: opacity 100ms linear;
+}

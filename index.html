@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Mice & Mystics Dice Roller</title>
+	<link rel="stylesheet" media="screen" href="style.css" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:700' rel='stylesheet' type='text/css'>
+	<script src='rolling.js'></script>
+    </head>
+    <body>
+        <main id="mmDieRoller">
+	    <form name='mmDieRoller'>
+		<fieldset id='diceRoller'>
+		    <legend><h1>Mice & Mystics Dice Roller</h1></legend>
+		    <div id='mice' class='rollers'>
+			<p>Mice roll:</p>
+			<div id='miceDice' class='dice'>
+			    <label><input type='radio' name='micedice' value='1'></input><div class='thismany'><i class="fa fa-cube"></i><br>1 die</div></label>
+			    <label><input type='radio' name='micedice' value='2'></input><div class='thismany'><i class="fa fa-cube"></i><i class="fa fa-cube"></i><br>2 dice</div></label>
+			    <label><input type='radio' name='micedice' value='3'></input><div class='thismany'><i class="fa fa-cubes fa-lg"></i><br>3 dice</div></label>
+			    <label><input type='radio' name='micedice' value='4'></input><div class='thismany'><i class="fa fa-cubes fa-lg"></i><i class="fa fa-cube"></i><br>4 dice</div></label>
+			    <label><input type='radio' name='micedice' value='5'></input><div class='thismany'><i class="fa fa-cube"></i><i class="fa fa-cubes fa-lg"></i><i class="fa fa-cube"></i><br>5 dice</div></label>
+			    <label><input type='radio' name='micedice' value='6'></input><div class='thismany'><i class="fa fa-cubes fa-lg"></i><i class="fa fa-cubes fa-lg"></i><br>6 dice</div></label>
+			</div>
+		    </div>
+		    <div id='minions' class='rollers'>
+			<p>Minions roll:</p>
+			<div class='dice'>
+			    <label><input type='radio' name='miniondice' value='1'></input><div class='thismany'><i class="fa fa-cube"></i><br>1 die</div></label>
+			    <label><input type='radio' name='miniondice' value='2'></input><div class='thismany'><i class="fa fa-cube"></i><i class="fa fa-cube"></i><br>2 dice</div></label>
+			    <label><input type='radio' name='miniondice' value='3'></input><div class='thismany'><i class="fa fa-cubes fa-lg"></i><br>3 dice</div></label>
+			    <label><input type='radio' name='miniondice' value='4'></input><div class='thismany'><i class="fa fa-cubes fa-lg"></i><i class="fa fa-cube"></i><br>4 dice</div></label>
+			    <label><input type='radio' name='miniondice' value='5'></input><div class='thismany'><i class="fa fa-cube"></i><i class="fa fa-cubes fa-lg"></i><i class="fa fa-cube"></i><br>5 dice</div></label>
+			    <label><input type='radio' name='miniondice' value='6'></input><div class='thismany'><i class="fa fa-cubes fa-lg"></i><i class="fa fa-cubes fa-lg"></i><br>6 dice</div></label>
+			</div>
+		    </div>
+		    <button id='rollNow' onclick='roll(); return false;'>ROLL!</button>
+		    <fieldset id='rolling-container' class='hidden'>
+			<ul id='mice-rolling-container'>
+			</ul>
+			<ul id='minions-rolling-container'>
+			</ul>
+		    </fieldset>
+		</fieldset>
+	    </form>
+	    <div id="debugDiv"></div>
+	</main>
+	<script>//debugOn(); console.log('testing console.log div');</script>
+    </body>
+</html>
