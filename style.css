@@ -1,122 +1,178 @@
 *:focus {
-    outline: none;
+	outline: none;
 }
 body {
-    font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-    margin: 5px;
-    padding: 0;
+	font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	margin: 5px;
+	padding: 0;
 }
 #mmDieRoller h1 {
-    font-family: "Droid Serif", "Times New Roman", serif;
-    margin: 0;
-    display: block;
-    font-size: 1.2em;
+	font-family: "Droid Serif", "Times New Roman", serif;
+	margin: 0;
+	display: block;
+	font-size: 1.2em;
 }
 #mmDieRoller fieldset {
-    border: 1px solid #666;
-    border-radius: 5px;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    text-align: center;
+	border: 1px solid #666;
+	border-radius: 5px;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	text-align: center;
 }
 #mmDieRoller legend {
-    padding: 10px 5px 5px;
+	padding: 10px 5px 5px;
 }
 #mmDieRoller .dice label {
-    display: inline-block;
+	display: inline-block;
 }
 #mmDieRoller label .fa {
-    margin: 0 0 5px;
+	margin: 0 0 5px;
 }
 #mmDieRoller .dice label > input {
-    visibility: hidden;
-    position: absolute;
+	visibility: hidden;
+	position: absolute;
 }
 #mmDieRoller .dice label > input + div {
-    cursor: pointer;
-    width: 25vw;
-    max-width: 100px;
-    margin: 0 0 2%;
-    padding: 5px 0;
-    border-radius: 5px;
-    border: 1px solid #eee;
+	cursor: pointer;
+	width: 25vw;
+	max-width: 100px;
+	margin: 0 0 2%;
+	padding: 5px 0;
+	border-radius: 5px;
+	border: 1px solid #eee;
 }
 #mmDieRoller .dice label> input:checked + div {
-    border: 1px solid #666;
+	border: 1px solid #666;
 }
 #mmDieRoller #rollNow {
-    height: 50px;
-    width: 150px;
-    border-radius: 5px;
-    margin: 10px;
-    display: inline-block;
-    overflow: hidden;
-    background-size: cover;
-    background-repeat: no-repeat;
+	height: 50px;
+	width: 150px;
+	border-radius: 5px;
+	margin: 10px;
+	display: inline-block;
+	overflow: hidden;
+	border-width: 1px 2px 2px 1px;
+	border-style: inset outset outset inset;
+	border-color: rgb(227,227,227);
 }
 #mmDieRoller #rolling-container {
-    margin: 5px;
-    text-align: center;
-    display: block;
-    background-color: #666;
-    border-radius: 0px;
-    border: 10px inset #666;
+	margin: 5px;
+	text-align: center;
+	display: block;
+	background-color: #666;
+	border-radius: 0px;
+	border: 10px inset #666;
 }
 #mmDieRoller #rolling-container.hidden {
-    display: none;
+	display: none;
 }
 #mmDieRoller #mice-rolling-container,
 #mmDieRoller #minions-rolling-container {
-    margin: 0px;
-    padding: 0px;
+	margin: 0px;
+	padding: 0px;
 }
 #mmDieRoller #minions-rolling-container {
-    text-align: left;
+	text-align: left;
 }
 #mmDieRoller .rolledDie {
-    height: 125px;
-    width: 125px;
-    border-radius: 5px;
-    margin: 10px;
-    display: inline-block;
-    overflow: hidden;
-    background-size: cover;
-    background-repeat: no-repeat;
+	height: 125px;
+	width: 125px;
+	border-radius: 5px;
+	margin: 10px;
+	display: inline-block;
+	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 #mmDieRoller #mice-rolling-container .rolledDie {
-    box-shadow: 5px 5px 0px 5px #ceb461;
-    background-image: url(MMdie-sprite.png);
+	box-shadow: 5px 5px 0px 5px #ceb461;
+	background-image: url(MMdie-sprite.png);
 }
 #mmDieRoller #minions-rolling-container .rolledDie {
-    box-shadow: 5px 5px 0px 5px #333;
-    background-image: url(MMminiondie-sprite.png);
+	box-shadow: 5px 5px 0px 5px #333;
+	background-image: url(MMminiondie-sprite.png);
+}
+#mmDieRoller #miceDiceDropdown,
+#mmDieRoller #diceDropdown {
+	display: none;
 }
 
 @media (min-width: 970px) {
-    #mmDieRoller {
-        width: 960px;
+	#mmDieRoller {
+	width: 960px;
 	margin: 0 auto;
 	padding: 0;
-    }
+	}
 }
 @media (max-width: 960px) {
-    #mmDieRoller {
-        width: 100%;
+	#mmDieRoller {
+		width: 100%;
 	padding: 0;
 	margin: 0 auto;
-    }
-    #mmDieRoller .rolledDie,
-    #mmDieRoller img {
+	}
+	#mmDieRoller .rolledDie,
+	#mmDieRoller img {
 	width: 20vw;
 	height: 20vw;
 	max-width: 125px;
 	max-height: 125px;
 	min-height: 75px;
 	min-width: 75px;
-    }
+	}
+	
+}
+@media (max-width: 480px) {
+	body {
+		font-size: 16px;
+		line-height: 18px;
+	}
+	#mmDieRoller #miceDice,
+	#mmDieRoller #dice {
+		display: none;
+	}
+	#mmDieRoller #miceDiceDropdown,
+	#mmDieRoller #diceDropdown {
+		display: inline-block;
+	}
+	#mmDieRoller .rolledDie, #mmDieRoller img {
+		width: 12vw;
+		height: 12vw;
+		min-height: 50px;
+		min-width: 50px;
+	}
+	#mmDieRoller #mice-rolling-container .rolledDie {
+		box-shadow: 2px 2px 0px 2px #ceb461;
+	}
+	#mmDieRoller #minions-rolling-container .rolledDie {
+		box-shadow: 2px 2px 0px 2px #333;
+	}
+	#mmDieRoller #rolling-container {
+		border: 5px inset #666;
+	}
+	#mmDieRoller .rolledDie {
+		margin: 5px;
+	}
+	#mice p,
+	#minions p {
+		display: inline-block;
+		margin: 10px;
+	}
+	#mmDieRoller #rollNow {
+		height: 50px;
+		width: 150px;
+		border-radius: 5px;
+		margin: 5px;
+		display: inline-block;
+		overflow: hidden;
+	}
+	#mmDieRoller legend {
+	    margin-left: 10px;
+	    padding: 5px;
+	}
+
 }
 #mmDieRoller img.rollingDie.gone {
-    opacity: 0;
-    transition: opacity 100ms linear;
+	opacity: 0;
+	transition: opacity 100ms linear;
 }
